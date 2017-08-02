@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dip"
+        android:gravity="center"
+        android:background="@drawable/item_border">
+
+        <android.support.v4.view.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1dip"
+            android:id="@+id/image_show"/>
+
+        <ImageView
+            android:layout_width="40dip"
+            android:layout_height="80dip"
+            android:layout_marginTop="80dip"
+            android:padding="8dip"
+            android:layout_alignParentLeft="true"
+            android:src="@mipmap/back"
+            android:clickable="true"
+            android:id="@+id/back_to_last_image"
+            android:visibility="gone"
+            android:background="@color/colorWhite1" />
+
+        <ImageView
+            android:layout_width="40dip"
+            android:layout_height="80dip"
+            android:layout_marginTop="80dip"
+            android:padding="8dip"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/next"
+            android:clickable="true"
+            android:id="@+id/go_to_next_image"
+            android:visibility="gone"
+            android:background="@color/colorWhite1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorGrey2"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:id="@+id/loading_image_layout"
+            android:weightSum="1">
+
+            <ProgressBar
+                android:layout_width="20dip"
+                android:layout_height="49dp"
+                android:layout_margin="5dip"
+                android:layout_weight="0.1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Just a moment..."
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimaryLightGrey2"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorWhite1">
+
+        <ImageView
+            android:layout_width="40dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:padding="10dip"
+            android:id="@+id/back_to_last_page"
+            android:src="@mipmap/back"/>
+
+        <HorizontalScrollView
+            android:layout_width="220dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:scrollbars="none">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dip"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryLightGrey"
+                android:text="Foursquare Place Name"
+                android:id="@+id/fp_name"/>
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:layout_width="50dip"
+                android:layout_height="wrap_content"
+                android:padding="10dip"
+                android:id="@+id/share"
+                android:src="@mipmap/share"/>
+
+            <ImageView
+                android:layout_width="50dip"
+                android:layout_height="wrap_content"
+                android:padding="10dip"
+                android:id="@+id/like_this_item"
+                android:src="@mipmap/like"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/information_layout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="200dip"
+        android:layout_marginBottom="40dip"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dip"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dip"
+                    android:background="@drawable/item_border">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dip"
+                        android:layout_marginTop="1dip"
+                        android:background="@color/colorWhite"
+                        android:orientation="horizontal"
+                        android:padding="15dip">
+
+                        <LinearLayout
+                            android:layout_width="200dip"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/place_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Place Name"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/place_categories"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dip"
+                                android:text="categories"
+                                android:textSize="18sp" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dip"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/place_price_level"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="price level"
+                                    android:textSize="18sp" />
+
+                                <TextView
+                                    android:id="@+id/place_price_level_suffix"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/colorGrey"
+                                    android:textSize="18sp"/>
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/place_menu"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dip"
+                                android:text="menu link"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dip"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/place_rating"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="rating"
+                                    android:textSize="25sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dip"
+                                    android:text="out of 10"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dip"
+                                android:layout_marginLeft="15dip"
+                                android:text="Opening Hours"
+                                android:textSize="15sp"
+                                android:textColor="@color/colorGrey"
+                                android:id="@+id/place_opening_hours"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dip"
+                                android:layout_marginLeft="15dip"
+                                android:text="Now Open"
+                                android:textSize="20sp"
+                                android:id="@+id/place_is_open"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dip"
+                                android:layout_marginLeft="15dip"
+                                android:textSize="18sp"
+                                android:id="@+id/place_is_public_holiday"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/rating_button"
+                    android:weightSum="2"
+                    android:background="@drawable/item_border">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dip"
+                        android:background="@color/colorWhite"
+                        android:layout_marginBottom="1dip"
+                        android:orientation="horizontal"
+                        android:layout_marginRight="1dip"
+                        android:weightSum="2"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="-40dip"
+                            android:layout_weight="1"
+                            android:src="@mipmap/rating_button" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:text="Rating"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimaryLightGrey"
+                            android:textSize="18sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dip"
+                        android:background="@color/colorWhite"
+                        android:id="@+id/comment_button"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.2"
+                            android:layout_marginRight="-20dip"
+                            android:background="@color/colorWhite"
+                            android:src="@mipmap/comment_button"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:text="Comment"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimaryLightGrey"
+                            android:textSize="18sp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/hidden_layout"
+                android:background="@drawable/item_border">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="1dip"
+                    android:padding="10dip"
+                    android:visibility="gone"
+                    android:background="@color/colorWhite"
+                    android:id="@+id/rating_layout">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dip"
+                        android:textSize="18sp"
+                        android:text="How would you like to rate this place?"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dip"
+                        android:layout_marginTop="10dip"
+                        android:layout_marginBottom="10dip"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/rating_star"
+                            android:id="@+id/rating_star_1"
+                            android:layout_weight="1"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/rating_star"
+                            android:id="@+id/rating_star_2"
+                            android:layout_weight="1"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/rating_star"
+                            android:id="@+id/rating_star_3"
+                            android:layout_weight="1"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/rating_star"
+                            android:id="@+id/rating_star_4"
+                            android:layout_weight="1"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/rating_star"
+                            android:id="@+id/rating_star_5"
+                            android:layout_weight="1"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="1dip"
+                    android:padding="10dip"
+                    android:background="@color/colorWhite"
+                    android:visibility="gone"
+                    android:id="@+id/comment_layout">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dip"
+                        android:textSize="18sp"
+                        android:text="Don't gonna leave some comment?"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dip"
+                        android:padding="10dip"
+                        android:textSize="20sp"
+                        android:id="@+id/comment_edittext"
+                        android:background="@drawable/edittext_border"/>
+
+                    <Button
+                        android:layout_width="80dip"
+                        android:layout_height="30dip"
+                        android:layout_marginTop="10dip"
+                        android:layout_gravity="right"
+                        android:layout_margin="10dip"
+                        android:id="@+id/comment_submit"
+                        android:text="Submit"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dip"
+                android:orientation="vertical"
+                android:background="@drawable/item_border">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/item_border">
+
+                    <fragment
+                        android:id="@+id/google_map"
+                        android:layout_marginTop="1dip"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        class="project.myapplication.GoogleMapFragment"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="1dip"
+                    android:padding="10dip"
+                    android:background="@color/colorWhite">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/place_distance"
+                        android:text="distance"
+                        android:textSize="15sp"
+                        android:textColor="@color/colorGrey"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dip"
+                        android:id="@+id/place_location"
+                        android:text="location"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dip"
+                        android:id="@+id/place_phone"
+                        android:text="phone"
+                        android:clickable="true"
+                        android:textSize="15sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dip"
+                android:orientation="vertical"
+                android:background="@drawable/item_border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dip"
+                    android:text="no comment"
+                    android:padding="10dip"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dip"
+                    android:textSize="18sp"
+                    android:id="@+id/comment_content"
+                    android:background="@color/colorWhite"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:background="@color/colorPrimaryDark">
+
+        <ImageView
+            android:layout_width="35dip"
+            android:layout_height="35dip"
+            android:id="@+id/discover"
+            android:src="@mipmap/discover"
+            android:layout_gravity="left|center_vertical"
+            android:clickable="true" />
+
+        <ImageView
+            android:layout_marginLeft="100dip"
+            android:layout_width="35dip"
+            android:layout_height="35dip"
+            android:id="@+id/list"
+            android:src="@mipmap/onclick_list"
+            android:layout_gravity="left|center_vertical"
+            android:clickable="true" />
+
+        <ImageView
+            android:layout_marginLeft="100dip"
+            android:layout_width="35dip"
+            android:layout_height="35dip"
+            android:id="@+id/me"
+            android:src="@mipmap/me"
+            android:layout_gravity="left|center_vertical"
+            android:clickable="true" />
+    </LinearLayout>
+
+</RelativeLayout>

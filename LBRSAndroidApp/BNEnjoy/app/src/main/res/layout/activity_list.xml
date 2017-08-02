@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+        android:gravity="center">
+
+        <SearchView
+            android:layout_width="match_parent"
+            android:layout_height="40dip"
+            android:layout_marginLeft="20dip"
+            android:layout_marginRight="20dip"
+            android:id="@+id/searchView"
+            android:background="@drawable/searchview_shape" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="45dip">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="40dip"
+            android:layout_margin="2dip"
+            android:padding="8dip"
+            android:background="@drawable/button_shape"
+            android:text="@string/FoodButton"
+            android:clickable="true"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorWhite"
+            android:id="@+id/food_list"
+            android:textAllCaps="false"
+            style="?android:attr/borderlessButtonStyle"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="40dip"
+            android:layout_margin="2dip"
+            android:padding="8dip"
+            android:background="@drawable/button_shape"
+            android:text="@string/ShoppingButton"
+            android:clickable="true"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorWhite"
+            android:id="@+id/shopping_list"
+            android:textAllCaps="false"
+            style="?android:attr/borderlessButtonStyle"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="40dip"
+            android:layout_margin="2dip"
+            android:padding="8dip"
+            android:background="@drawable/button_shape"
+            android:text="@string/PlaceToGoButton"
+            android:clickable="true"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorWhite"
+            android:id="@+id/place_to_go_list"
+            android:textAllCaps="false"
+            style="?android:attr/borderlessButtonStyle"/>
+
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:layout_marginTop="90dip">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryLightGrey"
+            android:gravity="center">
+
+            <Button
+                android:layout_width="90dip"
+                android:layout_height="30dip"
+                android:layout_margin="5dip"
+                android:text="@string/FilterText1"
+                android:textColor="@color/colorWhite"
+                android:id="@+id/popularity"
+                android:background="@drawable/button_shape"
+                android:textSize="15sp"
+                android:textAllCaps="false"
+                style="?android:attr/borderlessButtonStyle"
+                android:clickable="true" />
+
+            <Button
+                android:layout_width="75dip"
+                android:layout_height="30dip"
+                android:layout_marginRight="5dip"
+                android:paddingRight="5dip"
+                android:text="@string/FilterText2"
+                android:textColor="@color/colorWhite"
+                android:id="@+id/rating"
+                android:background="@drawable/button_shape"
+                android:textSize="15sp"
+                android:textAllCaps="false"
+                style="?android:attr/borderlessButtonStyle"
+                android:clickable="true" />
+
+            <Button
+                android:layout_width="90dip"
+                android:layout_height="30dip"
+                android:layout_marginRight="5dip"
+                android:paddingRight="5dip"
+                android:text="@string/FilterText3"
+                android:textColor="@color/colorWhite"
+                android:id="@+id/distance"
+                android:background="@drawable/button_shape"
+                android:textSize="15sp"
+                android:textAllCaps="false"
+                style="?android:attr/borderlessButtonStyle"
+                android:clickable="true" />
+
+            <Button
+                android:layout_width="70dip"
+                android:layout_height="30dip"
+                android:layout_marginRight="5dip"
+                android:paddingRight="5dip"
+                android:text="@string/FilterText4"
+                android:textColor="@color/colorWhite"
+                android:id="@+id/price"
+                android:background="@drawable/button_shape"
+                android:textSize="15sp"
+                android:textAllCaps="false"
+                style="?android:attr/borderlessButtonStyle"
+                android:clickable="true" />
+
+            <Button
+                android:layout_width="90dip"
+                android:layout_height="30dip"
+                android:layout_marginRight="5dip"
+                android:text="@string/FilterText6"
+                android:textColor="@color/colorWhite"
+                android:id="@+id/opennow"
+                android:background="@drawable/button_shape"
+                android:textSize="15sp"
+                android:textAllCaps="false"
+                style="?android:attr/borderlessButtonStyle"
+                android:clickable="true" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="130dip"
+        android:layout_marginBottom="40dip"
+        android:background="@color/colorWhite">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:scrollbars="vertical"/>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimaryDark"
+        android:elevation="10dip"
+        android:translationZ="10dip">
+
+        <ImageView
+            android:layout_width="35dip"
+            android:layout_height="35dip"
+            android:layout_marginLeft="40dip"
+            android:id="@+id/discover"
+            android:src="@mipmap/discover"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:clickable="true" />
+
+        <ImageView
+            android:layout_width="35dip"
+            android:layout_height="35dip"
+            android:id="@+id/list"
+            android:src="@mipmap/onclick_list"
+            android:layout_centerInParent="true"
+            android:clickable="true" />
+
+        <ImageView
+            android:layout_width="35dip"
+            android:layout_height="35dip"
+            android:layout_marginRight="40dip"
+            android:id="@+id/me"
+            android:src="@mipmap/me"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:clickable="true" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">BNEnjoy</string>
+    <string name="FilterText1">Popularity</string>
+    <string name="FilterText2">Rating</string>
+    <string name="FilterText3">Distance</string>
+    <string name="FilterText4">Price</string>
+    <string name="FilterText5">Liked</string>
+    <string name="FilterText6">Open Now</string>
+    <string name="FoodButton">Food</string>
+    <string name="ShoppingButton">Shopping</string>
+    <string name="PlaceToGoButton">Place To Go</string>
+    <string name="LoginTitle">BNEnjoy</string>
+    <string name="LoginSubtitle">Enjoy your better life</string>
+    <string name="Email">Email</string>
+    <string name="EmailHint">Your sign-in email</string>
+    <string name="Password">Password</string>
+    <string name="PasswordHint">Your password</string>
+    <string name="PasswordInputFilter">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+    <string name="NameInputFilter">\u0020_0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+    <string name="LoginButton">LOGIN</string>
+    <string name="LoginHint">No account yet? Create one</string>
+    <string name="SignupName">Name</string>
+    <string name="SignupNameHint">Your name</string>
+    <string name="SignupButton">SIGN UP</string>
+    <string name="SignupHint">Already has an account? Login</string>
+    <string name="SignupConfirmPassword">Confirm Password</string>
+    <string name="SignupConfirmPasswordHint">Enter your password again</string>
+    <string name="title_activity_maps">Map</string>
+    <string-array name="gender_array">
+        <item></item>
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+</resources>

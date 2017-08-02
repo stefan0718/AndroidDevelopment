@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="210dip">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/title"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dip"
+                android:text="@string/LoginTitle"
+                android:textColor="@color/colorWhite1"
+                android:textSize="60sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:id="@+id/signupTitle"/>
+
+            <SearchView
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:id="@+id/searchView"
+                android:background="@drawable/searchview_shape" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="60dip"
+                    android:layout_height="60dip"
+                    android:id="@+id/food"
+                    android:src="@mipmap/food"
+                    android:layout_gravity="start|center_vertical"
+                    android:clickable="true" />
+
+                <ImageView
+                    android:layout_marginLeft="60dip"
+                    android:layout_width="60dip"
+                    android:layout_height="60dip"
+                    android:id="@+id/shopping"
+                    android:src="@mipmap/shopping"
+                    android:layout_gravity="center_vertical"
+                    android:clickable="true" />
+
+                <ImageView
+                    android:layout_marginLeft="60dip"
+                    android:layout_width="60dip"
+                    android:layout_height="60dip"
+                    android:id="@+id/place_togo"
+                    android:src="@mipmap/place_togo"
+                    android:layout_gravity="end|center_vertical"
+                    android:clickable="true" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/recommended_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorTransparent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="40dip"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="30dip"
+                android:padding="15dip"
+                android:scrollbars="vertical" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dip"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5dip"
+                android:gravity="center"
+                android:id="@+id/recommended_change"
+                android:textColor="@color/colorGrey"
+                android:text="Not interested? Click here to change"
+                android:textSize="15sp"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="40dip"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:id="@+id/loading_layout"
+            android:weightSum="1">
+
+            <ProgressBar
+                android:layout_width="20dip"
+                android:layout_height="49dp"
+                android:layout_margin="5dip"
+                android:layout_weight="0.1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Just a moment..."
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimaryLightGrey2"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dip"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimaryDark"
+            android:elevation="10dip"
+            android:orientation="horizontal"
+            android:translationZ="10dip">
+
+            <ImageView
+                android:id="@+id/discover"
+                android:layout_width="35dip"
+                android:layout_height="35dip"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="40dip"
+                android:clickable="true"
+                android:src="@mipmap/onclick_discover" />
+
+            <ImageView
+                android:id="@+id/list"
+                android:layout_width="35dip"
+                android:layout_height="35dip"
+                android:layout_centerInParent="true"
+                android:clickable="true"
+                android:src="@mipmap/list" />
+
+            <ImageView
+                android:id="@+id/me"
+                android:layout_width="35dip"
+                android:layout_height="35dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="40dip"
+                android:clickable="true"
+                android:src="@mipmap/me" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>
+
+
+
+
+
+
+

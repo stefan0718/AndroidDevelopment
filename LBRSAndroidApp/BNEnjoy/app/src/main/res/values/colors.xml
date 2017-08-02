@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#404040</color>
+    <color name="colorPrimaryDark">#202020</color>
+    <color name="colorPrimaryGrey">#505050</color>
+    <color name="colorPrimaryLightGrey">#606060</color>
+    <color name="colorPrimaryLightGrey2">#808080</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorWhite1">#b3FFFFFF</color>
+    <color name="colorWhite2">#4dFFFFFF</color>
+    <color name="colorTransparent">#00FFFFFF</color>
+    <color name="colorError">#FF4F33</color>
+    <color name="colorGrey">#C0C0C0</color>
+    <color name="colorGrey2">#F0F0F0</color>
+</resources>
