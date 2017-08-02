@@ -1,5 +1,9 @@
 # LBRSAndroidApp
+<<<<<<< HEAD
 LBRS Android App
+=======
+LBRS Android App Development
+>>>>>>> fc5604fde50a12e495242579919958f5304fa2b4
 
 This app called BNEnjoy is a location-based recommendation service application that provides information to users;
 
