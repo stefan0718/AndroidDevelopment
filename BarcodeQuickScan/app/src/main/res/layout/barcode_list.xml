@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimary"
+    android:layout_height="40dip">
+
+    <TextView
+        android:layout_width="40dip"
+        android:layout_height="40dip"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textColor="@color/colorText"
+        android:textSize="15sp"
+        android:id="@+id/barcode_number" />
+
+    <TextView
+        android:layout_width="150dip"
+        android:layout_height="40dip"
+        android:textColor="@color/colorText"
+        android:textSize="15sp"
+        android:id="@+id/barcode_detail" />
+
+    <TextView
+        android:layout_width="80dip"
+        android:layout_height="40dip"
+        android:textColor="@color/colorText"
+        android:textSize="15sp"
+        android:id="@+id/barcode_weight" />
+
+    <ImageView
+        android:id="@+id/delete"
+        android:layout_width="40dip"
+        android:layout_height="40dip"
+        android:padding="10dip"
+        android:src="@mipmap/delete"/>
+
+</LinearLayout>

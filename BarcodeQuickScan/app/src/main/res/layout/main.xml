@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:id="@+id/mainLayout">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimaryDark">
+
+        <TextView
+            android:layout_width="200dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dip"
+            android:layout_marginTop="10dip"
+            android:text="BarcodeQuickReader"
+            android:textColor="@color/colorText"
+            android:textSize="18sp"/>
+
+        <ImageView
+            android:id="@+id/delete_all"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:padding="10dip"
+            android:src="@mipmap/delete"/>
+
+        <ImageView
+            android:id="@+id/email"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:padding="10dip"
+            android:src="@mipmap/more"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:orientation="horizontal"
+        android:padding="10dip">
+
+        <EditText
+            android:id="@+id/barcodeInput"
+            android:layout_width="150dip"
+            android:layout_height="30dip"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_corner"
+            android:hint="Scan Barcode Here"
+            android:focusable="true"
+            android:paddingLeft="5dip"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textColor="@color/colorPrimaryDark"
+            android:textColorHint="@color/colorGrey"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/weightInput"
+            android:layout_width="80dip"
+            android:layout_height="30dip"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dip"
+            android:focusable="true"
+            android:background="@drawable/rounded_corner"
+            android:hint="Weight"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingLeft="5dip"
+            android:textColor="@color/colorPrimaryDark"
+            android:textColorHint="@color/colorGrey"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/btn_ok"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="50dip"
+            android:layout_height="30dip"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dip"
+            android:background="@drawable/rounded_corner"
+            android:text="Ok" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:padding="10dip"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"/>
+
+</LinearLayout>
