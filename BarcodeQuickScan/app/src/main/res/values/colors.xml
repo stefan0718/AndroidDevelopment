@@ -5,4 +5,5 @@
     <color name="colorAccent">#202020</color>
     <color name="colorText">#FFFFFF</color>
     <color name="colorGrey">#909090</color>
+    <color name="halfTransparentGrey">#E6000000</color>
 </resources>

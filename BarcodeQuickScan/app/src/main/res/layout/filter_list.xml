@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dip"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        android:layout_marginLeft="5dip"
+        android:layout_marginRight="5dip"
+        android:layout_height="40dip">
+
+        <TextView
+            android:layout_width="15dip"
+            android:layout_height="40dip"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textSize="13sp"
+            android:textColor="@color/colorText"
+            android:id="@+id/filter_number" />
+
+        <TextView
+            android:layout_width="35dip"
+            android:layout_height="40dip"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textSize="13sp"
+            android:textColor="@color/colorText"
+            android:id="@+id/filter_prefix" />
+
+        <TextView
+            android:layout_width="70dip"
+            android:layout_height="40dip"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textSize="13sp"
+            android:textColor="@color/colorText"
+            android:id="@+id/filter_content" />
+
+        <TextView
+            android:layout_width="30dip"
+            android:layout_height="40dip"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textSize="13sp"
+            android:textColor="@color/colorText"
+            android:id="@+id/filter_suffix" />
+
+        <TextView
+            android:layout_width="80dip"
+            android:layout_height="40dip"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textSize="13sp"
+            android:textColor="@color/colorText"
+            android:id="@+id/filter_description" />
+
+        <ImageView
+            android:id="@+id/filter_delete"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:padding="10dip"
+            android:src="@mipmap/delete"/>
+
+    </LinearLayout>
+
+</HorizontalScrollView>
+
